@@ -1,0 +1,166 @@
+/* --- CORE VARIABLES (CARGO AESTHETIC) --- */
+:root {
+    --bg-color: #0d0d0d;
+    /* Deepest charcoal, almost black */
+    --card-bg: #111111;
+    /* Slightly lighter for contrast */
+    --text-main: #b0b0b0;
+    /* Dimmed grey for reading */
+    --text-bright: #ffffff;
+    /* White for headers */
+    --accent: #333333;
+    /* Borders/Lines */
+    --code-highlight: #2a2a2a;
+    /* Code block background */
+    --link-color: #666;
+    /* Subtle links */
+    --link-hover: #fff;
+    /* Bright hover */
+
+    --font-mono: 'Courier New', Courier, monospace;
+    /* The "Code" look */
+    --font-header: 'Mono', system-ui;
+    /* The "Glitch" look */
+}
+
+/* --- RESET & BASICS --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-mono);
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 2rem;
+}
+
+/* --- LAYOUT --- */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    border-left: 1px solid var(--accent);
+    /* The Cargo "Grid" line look */
+    padding-left: 2rem;
+    min-height: 100vh;
+}
+
+/* --- HEADER --- */
+header {
+    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--accent);
+}
+
+h1 {
+    font-family: var(--font-header);
+    font-size: 4rem;
+    color: var(--text-bright);
+    line-height: 1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.subtitle {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* --- POST MODULES --- */
+.post {
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.post-meta {
+    font-size: 0.75rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.post h2 {
+    font-size: 1.5rem;
+    color: var(--text-bright);
+    margin-bottom: 1rem;
+    font-weight: normal;
+    border-bottom: 1px dashed #333;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.post p {
+    margin-bottom: 1rem;
+}
+
+/* Image Styling */
+.post-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem 0;
+    border: 1px solid var(--accent);
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.post-img:hover {
+    opacity: 1;
+    border-color: var(--text-main);
+}
+
+/* Code Block Styling */
+pre {
+    background: var(--code-highlight);
+    padding: 1rem;
+    overflow-x: auto;
+    border: 1px solid var(--accent);
+    margin: 1rem 0;
+    color: #ccc;
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--link-hover);
+    border-color: var(--link-hover);
+}
+
+/* --- FOOTER --- */
+footer {
+    margin-top: 5rem;
+    font-size: 0.8rem;
+    color: #444;
+    border-top: 1px solid var(--accent);
+    padding-top: 1rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+    .container {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
